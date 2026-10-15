@@ -5,6 +5,12 @@ A simple chat demo for Socket.IO
 
 $ npm ci
 
+Copy `.env.example` to `.env` and fill in your secrets, then generate a local self-signed certificate:
+
+```bash
+openssl req -x509 -newkey rsa:2048 -nodes -keyout certificates/server.key -out certificates/server.cert -days 365 -subj "/CN=localhost"
+```
+
 $ npm start
 
 And point your browser to http://localhost:3000. Optionally, specify a port by supplying the PORT env variable.
